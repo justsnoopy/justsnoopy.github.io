@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Piano</title>
+</head>
+<body>
+    <section class="main">
+        <div class="b_buttons">
+            <button class="el_btn el_colored">Notes</button>
+            <button class="el_btn">Letters</button>
+            <button class="el_fullscreen">
+                <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                    <path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
+                    <path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
+                    <path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
+                    <path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="b_piano" id="piano">
+            <div class="el_piano-key" data-letter="D" data-note="c"></div>
+            <div class="el_piano-key" data-letter="F" data-note="d"></div>
+            <div class="el_piano-key" data-letter="G" data-note="e"></div>
+            <div class="el_piano-key" data-letter="H" data-note="f"></div>
+            <div class="el_piano-key" data-letter="J" data-note="g"></div>
+            <div class="el_piano-key" data-letter="K" data-note="a"></div>
+            <div class="el_piano-key" data-letter="L" data-note="b"></div>
+
+            <div class="b_second_keys">
+                <div class="el_piano-key el_second" data-letter="R" data-note="c#"></div>
+                <div class="el_piano-key el_second" data-letter="T" data-note="d#"></div>
+                <div class="el_piano-key el_none el_second "></div>
+                <div class="el_piano-key el_second" data-letter="U" data-note="f#"></div>
+                <div class="el_piano-key el_second" data-letter="I" data-note="g#"></div>
+                <div class="el_piano-key el_second" data-letter="D" data-note="a#"></div>
+            </div>
+        </div>
+        <div class="b_audio">
+            <audio src="audio/c.mp3" id="c"></audio>
+            <audio src="audio/d.mp3" id="d"></audio>
+            <audio src="audio/e.mp3" id="e"></audio>
+            <audio src="audio/f.mp3" id="f"></audio>
+            <audio src="audio/g.mp3" id="g"></audio>
+            <audio src="audio/a.mp3" id="a"></audio>
+            <audio src="audio/b.mp3" id="b"></audio>
+
+            <audio src="audio/c♯.mp3" id="c#"></audio>
+            <audio src="audio/d♯.mp3" id="d#"></audio>
+            <audio src="audio/f♯.mp3" id="f#"></audio>
+            <audio src="audio/g♯.mp3" id="g#"></audio>
+            <audio src="audio/a♯.mp3" id="a#"></audio>
+        </div>
+    </section>
+</body>
+    <script src="main.js"></script>
+</html>

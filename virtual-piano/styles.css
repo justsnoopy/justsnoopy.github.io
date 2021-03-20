@@ -1,0 +1,146 @@
+body {
+    margin: 20vh 0 0 0;
+    background-color: #E7E5DF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    padding: 30px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #393E41;
+    border-radius: 20px;
+}
+
+.b_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.b_piano {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 270px;
+    max-width: 560px;
+    margin: 0 auto 30px;
+}
+
+.el_piano-key {
+    position: relative;
+    width: 80px;
+    height: 270px;
+    background-color: #D3D0CB;
+    border: 4px solid #393E41;
+    border-radius: 0px 0px 12px 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.el_piano-key:hover {
+    background-color: #E7E5DF;
+    transition: ease-in 0.1s;
+}
+
+.el_piano-key::before {
+    content: attr(data-note);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    color: #a2abb3;
+    bottom: -45px;
+    left: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+
+.el_btn {
+    width: 120px;
+    height: 40px;
+    padding: 0 10px;
+    margin-right: 10px;
+    background-color: #D3D0CB;
+    border: 0;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #393E41;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.el_colored {
+    background-color: #E7BB41;
+}
+
+.el_fullscreen {
+    width: 60px;
+    height: 40px;
+    padding: 0 10px;
+    margin-left: auto;
+    background-color: #D3D0CB;
+    border: 0;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #393E41;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.b_second_keys {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 53px;
+    right: 53px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.el_second {
+    width: 54px;
+    height: 170px;
+    background-color: #393E41;
+    border: 0;
+    border-radius: 0px 0px 9px 9px;
+    z-index: 3;
+    pointer-events: auto;
+    transform-origin: center top;
+}
+
+.el_second::before {
+    bottom: 175px;
+    left: 7px;
+}
+
+.el_second:hover {
+    background-color: #484e52;
+}
+
+.el_none {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.el_active {
+    transform: scale(0.96);
+}
